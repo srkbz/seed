@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-docker compose build && docker compose run secrets
+docker compose up -d --build
+docker compose exec -it secrets bash
